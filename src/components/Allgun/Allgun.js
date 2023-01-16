@@ -13,15 +13,22 @@ const Allgun = () => {
 
     return (
         <div className='mt-5'>
-            <h2 className='text-3xl font-semibold'>Welcome to Buds Gun Shop</h2>
+            <div className='my-5'>
+            <h2 className='text-3xl font-semibold my-2'>Welcome to Buds Gun Shop</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit aliquid ex 
             deserunt eius incidunt similique quasi <br /> Lorem ipsum dolor sit amet consectetur 
              adipisicing elit. Quibus.
             </p>
-            <p> ALl Gun: {guns.length}</p>
-            {
-                guns.map(gun => <SingleGun gun ={gun}></SingleGun>)
+            <p className='text-3xl front-bold'> ALl Gun: {guns.length}</p>
+            </div>
+           <div className='w-[90%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'> 
+           {
+                guns.map(gun => <SingleGun gun ={gun} 
+                    key ={gun.id}
+                
+                ></SingleGun>)
             }
+           </div>
         </div>
     );
 };
